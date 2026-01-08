@@ -1,0 +1,123 @@
+/* === GLOBAL FULLSCREEN === */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', 'Inter', sans-serif;
+  background: linear-gradient(180deg, #fff8dc, #ffeccd 65%, #ffd7b4);
+  color: #3a3a3a;
+  width: 100vw;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* fullscreen app container */
+.app {
+  width: 100vw;
+  min-height: 100vh;
+}
+
+/* === HEADER === */
+.header {
+  text-align: center;
+  padding: 40px 0 10px;
+  width: 100%;
+}
+
+.header h1 {
+  font-size: 2.6rem;
+  font-weight: 800;
+  color: #ff6b4a;
+  letter-spacing: -0.5px;
+}
+
+/* === NAVIGATION FULL WIDTH === */
+.nav {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  padding: 16px 10px;
+  background: rgba(255,255,255,0.6);
+  backdrop-filter: blur(6px);
+  box-shadow: 0 4px 12px rgba(0,0,0,.08);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.nav button {
+  border: none;
+  border-radius: 10px;
+  padding: 10px 18px;
+  cursor: pointer;
+  background: #ff865e;
+  color: white;
+  font-weight: 600;
+  font-size: 15px;
+  transition: .24s ease;
+}
+
+.nav button:hover {
+  background: #ff5d2a;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255,93,42,.3);
+}
+
+/* === PAGE FULLSCREEN === */
+.page {
+  width: 100vw;
+  padding: 32px 24px 70px;
+  box-sizing: border-box;
+}
+
+/* === IMAGE GRID BIGGER === */
+.image-row {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px,1fr));
+  gap: 22px;
+  margin: 24px 0;
+}
+
+.image-row img {
+  width: 100%;
+  height: 200px;
+  border-radius: 16px;
+  object-fit: cover;
+  box-shadow: 0 4px 14px rgba(0,0,0,.15);
+  transition: .28s ease;
+}
+
+.image-row img:hover {
+  transform: scale(1.04);
+  box-shadow: 0 6px 18px rgba(0,0,0,.2);
+}
+
+/* === FOOTER FULL WIDTH === */
+.footer {
+  width: 100vw;
+  text-align: center;
+  padding: 24px;
+  background: rgba(255,255,255,.6);
+  backdrop-filter: blur(6px);
+  font-size: .92rem;
+  color: #555;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+  .image-row img { height: 160px; }
+  .header h1 { font-size: 2.1rem; }
+}
+
+@media (max-width: 480px) {
+  .image-row {
+    grid-template-columns: repeat(2,1fr);
+  }
+  .image-row img { height: 130px; }
+  .nav button {
+    flex: 1;
+    min-width: 110px;
+  }
+}
